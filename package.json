@@ -6,8 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --dir src",
+    "lint-staged": "lint-staged",
     "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "npx eslint . --fix",
+      "npx prettier --write .",
+      "npm run commitmsg"
+    ]
   },
   "dependencies": {
     "next": "12.0.4",
@@ -21,7 +29,18 @@
     "@types/react": "17.0.36",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
-    "husky": "^7.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.4.1",
     "typescript": "4.5.2"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 100
   }
 }
