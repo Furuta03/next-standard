@@ -3,7 +3,7 @@ name: Chromatic
 on:
   push:
     branches:
-      - withStoryBook
+      - with_storybook
 jobs:
   build:
     runs-on: ubuntu-latest
