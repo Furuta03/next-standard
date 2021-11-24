@@ -14,7 +14,8 @@
     "lint-staged": "lint-staged",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=72b474a78c31"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -54,6 +55,7 @@
     "@types/react": "17.0.36",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.0.6",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
     "eslint-config-prettier": "^8.3.0",

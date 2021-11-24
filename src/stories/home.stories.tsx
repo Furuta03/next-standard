@@ -2,9 +2,11 @@
 
 import Home from '@/pages/index';
 
-export default {
+const home = {
   title: 'Pages/Home',
   component: Home,
 };
 
 export const HomePage = () => <Home />;
+
+export default home;
