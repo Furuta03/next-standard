@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -13,13 +12,13 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-
       <main className={styles.main}>
         <h1 className={styles.title}>
-      <Button variant='contained' >hoge</Button>
+          Next.js Template
         </h1>
 
         <p className={styles.description}>
+          Get started by editing <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --env=jsdom --verbose",
     "lint": "eslint src --ext .js,jsx,.ts,.tsx",
     "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix",
     "lint:style": "stylelint '**/*.{css,scss,sass}'",
@@ -33,14 +34,24 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
     "@types/node": "16.11.9",
     "@types/react": "17.0.36",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.0",
+    "jest": "^27.3.1",
+    "jest-css-modules": "^2.1.0",
     "lint-staged": "^12.1.2",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
@@ -61,5 +72,15 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss)|(css)$": "<rootDir>/node_modules/jest-css-modules",
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   }
 }
