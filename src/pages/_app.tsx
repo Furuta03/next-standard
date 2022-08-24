@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import type { AppProps } from 'next/app';
 import React from 'react';
